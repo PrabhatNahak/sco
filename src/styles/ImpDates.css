@@ -1,0 +1,218 @@
+.impd-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 80px;
+}
+
+.impd-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #1e3c72 100%);
+  padding: 36px 20px;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #00b4d8;
+}
+
+.impd-hero-icon { display: none; }
+
+.impd-hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.impd-hero p {
+  font-size: 15px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.impd-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Timeline */
+.impd-timeline {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.impd-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.impd-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.impd-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+.impd-connector {
+  width: 3px;
+  flex: 1;
+  min-height: 30px;
+  background: #e2e8f0;
+  margin: 4px 0;
+}
+
+.impd-card-body {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  flex: 1;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impd-card-body:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Active card highlight */
+.impd-card.active .impd-card-body {
+  border-left: 4px solid #22c55e;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.impd-card.over .impd-card-body {
+  border-left: 4px solid #94a3b8;
+  opacity: 0.7;
+}
+
+.impd-card.upcoming .impd-card-body {
+  border-left: 4px solid #00b4d8;
+}
+
+.impd-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.impd-event {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0a192f;
+  margin: 0;
+}
+
+.impd-card.over .impd-event {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.impd-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.impd-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00b4d8;
+}
+
+.impd-card.active .impd-date {
+  color: #16a34a;
+}
+
+.impd-card.over .impd-date {
+  color: #94a3b8;
+}
+
+/* Note */
+.impd-note {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border-left: 4px solid #ff9800;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.impd-note h3 {
+  color: #e65100;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.impd-note ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.impd-note li {
+  color: #5d4037;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.impd-note a {
+  color: #00b4d8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.impd-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .impd-wrapper {
+    padding-top: 100px;
+  }
+
+  .impd-hero {
+    padding: 28px 15px;
+  }
+
+  .impd-hero h1 {
+    font-size: 26px;
+  }
+
+  .impd-hero p {
+    font-size: 13px;
+  }
+
+  .impd-container {
+    padding: 40px 16px;
+  }
+
+  .impd-event {
+    font-size: 15px;
+  }
+
+  .impd-card-body {
+    padding: 16px 18px;
+  }
+}
